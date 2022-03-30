@@ -40,6 +40,7 @@ async def Announcement(ctx):
 async def on_member_join(member):
     channel = client.get_channel('936620125006725123')
     await channel.send(embed=embedS) # channel에 보내기
+    await member.send('welcome !')
 
 bot.run('OTU4NzUzNzM2MzQ2NDQzODQ4.YkR6_w.KaBAnYbqU18-LHMsHogX3JWUPyE')
 
