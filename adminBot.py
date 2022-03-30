@@ -32,6 +32,7 @@ async def on_ready():
     print('Loggend in Bot: ', bot.user.name)
     print('Bot id: ', bot.user.id)
     print('connection was succesful!')
+    print('Channel: ', channel)
     print('https://discord.com/oauth2/authorize?client_id=958753736346443848&permissions=8&scope=bot')
 
 @bot.command(aliases=['공지사항', '공'])
