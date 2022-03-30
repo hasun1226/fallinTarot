@@ -1,1 +1,1 @@
-"worker: python adminBot.py" 
+worker: python adminBot.py
