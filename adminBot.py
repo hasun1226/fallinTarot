@@ -24,8 +24,11 @@ embedS.add_field(name="각 방의 용도",
 embedS.set_footer(text="디스코드도 좋지만 단톡방도 관심 많이 가져주세요~ 한 달 30톡 못 채우시면 숙제가 있어요!",
                  icon_url="https://us.123rf.com/450wm/zo3listic/zo3listic1905/zo3listic190500090/125123133-%EB%8A%90%EB%82%8C%ED%91%9C-%EC%9C%84%ED%97%98-%EA%B8%B0%ED%98%B8%EC%9E%85%EB%8B%88%EB%8B%A4-%EC%A3%BC%EC%9D%98-%ED%91%9C%EC%8B%9C-%EC%95%84%EC%9D%B4%EC%BD%98%EC%9E%85%EB%8B%88%EB%8B%A4-%EC%9C%84%ED%97%98-%EA%B2%BD%EA%B3%A0-%EC%A3%BC%EC%9D%98-%ED%91%9C%EC%8B%9C.jpg?ver=6")
 
+channel = None
+
 @bot.event
 async def on_ready():
+    channel = bot.get_channel('936620125006725123')
     print('Loggend in Bot: ', bot.user.name)
     print('Bot id: ', bot.user.id)
     print('connection was succesful!')
@@ -38,7 +41,6 @@ async def Announcement(ctx):
 @bot.event
 async def on_member_join(member):
     print("member join")
-    channel = bot.get_channel('936620125006725123')
     await channel.send(embed=embedS) # channel에 보내기
 
 bot.run('OTU4NzUzNzM2MzQ2NDQzODQ4.YkR6_w.KaBAnYbqU18-LHMsHogX3JWUPyE')
