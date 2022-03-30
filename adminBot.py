@@ -5,7 +5,6 @@ from discord.ext import commands
 intents = discord.Intents.all()
 intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
-#client = discord.Client(intents=intents)
 
 embedS = discord.Embed(title="☆공지사항☆", description="", color=0xFFFFFF)
 embedS.set_thumbnail(url="http://drive.google.com/uc?export=download&id=17q0DCBUJrJanmjNNR3ujul5YxVcNkDny")
@@ -39,9 +38,8 @@ async def Announcement(ctx):
 @bot.event
 async def on_member_join(member):
     print("member join")
-    await member.send('welcome !')
-    #channel = client.get_channel('936620125006725123')
-    #await channel.send(embed=embedS) # channel에 보내기
+    channel = bot.get_channel('936620125006725123')
+    await channel.send(embed=embedS) # channel에 보내기
 
 bot.run('OTU4NzUzNzM2MzQ2NDQzODQ4.YkR6_w.KaBAnYbqU18-LHMsHogX3JWUPyE')
 
