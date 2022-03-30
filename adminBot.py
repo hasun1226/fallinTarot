@@ -28,7 +28,7 @@ channel = None
 
 @bot.event
 async def on_ready():
-    channel = bot.get_channel('936620125006725123')
+    channel = bot.get_channel(936620125006725123)
     print('Loggend in Bot: ', bot.user.name)
     print('Bot id: ', bot.user.id)
     print('connection was succesful!')
