@@ -2,9 +2,9 @@ import discord
 import asyncio
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix="!")
 intents = discord.Intents.all()
 intents.members = True
+bot = commands.Bot(command_prefix="!", intents=intents)
 
 embedS = discord.Embed(title="☆공지사항☆", description="", color=0xFFFFFF)
 embedS.set_thumbnail(url="http://drive.google.com/uc?export=download&id=17q0DCBUJrJanmjNNR3ujul5YxVcNkDny")
